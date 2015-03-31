@@ -1,0 +1,29 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>This project demonstrates the efforts of <em>Rob Helvey and is currently in progress</em>. 
+            All credit should be given to our Muses, our Benevolent and Patient instructors, 
+            our Idols of code, <em> Sadukie and Eric Ward</em>.</p>
+    </div>
+    <div class="sidebar-module">
+        <h4>Recent Blog</h4>
+        <ol id="blogtable" class="list-unstyled">
+        </ol>
+    </div>
+    <div class="sidebar-module">
+        <h4>find us on:</h4>
+        <ol class="list-unstyled">
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            <li><a href="https://www.facebook.com/officialhenryrollins" target="_blank">Facebook</a></li>
+        </ol>
+    </div>
+    <div class="sidebar-module">
+        <h4></h4>
+        <ol class="list-unstyled">
+            <li><a></a></li>
+        </ol>
+    </div>
+</div><!-- /.blog-sidebar -->

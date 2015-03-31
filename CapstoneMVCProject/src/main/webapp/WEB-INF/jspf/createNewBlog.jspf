@@ -1,0 +1,33 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="container">
+    <div class="blog-header">
+        <h1 class="blog-title">Snazzy Blog Creation Page</h1>
+        <hr>
+        <p class="lead blog-description">Create your custom blog below</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+                <h2 class="blog-post-title">
+                    Title: <input type="text" name="title" id="title" placeholder="insert title" ><br> 
+                </h2>
+                <form>
+                    <!--                    <div id="blogtext">-->
+                    <textarea id="blogtext"></textarea>
+                    <!--                    </div>-->
+                    <!--</form>-->
+                    <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                        <button type="submit" id="blog-add-button" class="btn btn-default">Save</button>
+                        <!--<button type="button" id="blog-delete-button" class="btn btn-default">Delete</button>-->
+                        <!--<button type="submit" id="blog-unpost-button" class="btn btn-default">Unpost</button>-->
+                        <button type="submit" id="blog-post-button" class="btn btn-default">Post</button>
+                    </div>
+                </form>
+            </div><!-- /.blog-post -->
+            <hr>
+        </div><!-- /.blog-main -->
+        <!--                    sidebar-->
+        <%@include file="adminsidebarfragment.jspf"%>
+    </div><!-- /.row -->
+</div><!-- /.container -->

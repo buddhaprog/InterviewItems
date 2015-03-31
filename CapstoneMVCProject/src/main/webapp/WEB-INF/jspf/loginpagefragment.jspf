@@ -1,0 +1,25 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<!--tried modal content as well-->
+<div style="text-align: center">
+    <div>
+        <h5>Please Enter Your Login Information:</h5>
+    </div>
+    <div class="login-body">
+        <!--        security item-->
+        <form method="post" class="signin" action="j_spring_security_check" name="login_form">
+            <fieldset>
+                <p><input type="text" class="span3" name="userid" id="email" placeholder="Email" required></p>
+                <!--SECURITY ITEM j_password-->
+                <p><input type="password" class="span3" id="password" name="j_password" placeholder="Password" required></p>
+                <p><button type="submit" class="btn btn-primary" id="login" data-target=".loginuser">Sign in</button>
+                    <!--                <br> <a href="#">Forgot Password?</a>-->
+                </p>
+            </fieldset>
+        </form>
+    </div>
+    New To our company?<br>
+    <br>
+    <p><button type="button"  class="btn btn-primary" id="newuser-button" data-toggle="modal" data-target=".newuserformmodal">Register</button></p>
+    <%@include file="newuserformmodalfragment.jspf"%>
+</div>

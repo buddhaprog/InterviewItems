@@ -1,0 +1,13 @@
+
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div id="footer">
+    <div class="container">
+        <p class="muted credit" style="text-align: right">
+            <a href="http://www.swcguild.com/" target="_blank">The Guild</a><br>
+            <a href="http://www.learningtree.com/" target="_blank">Learning Tree</a>
+        </p> 
+    </div>
+</div>
+
+

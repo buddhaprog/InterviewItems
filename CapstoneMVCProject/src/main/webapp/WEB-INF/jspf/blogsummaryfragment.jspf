@@ -1,0 +1,24 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="container">
+    <div class="blog-header">
+        <h1 class="blog-title">Blog Summary Page</h1>
+        <p class="lead blog-description">Click the title of the blog you would like to read</p>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+                <p id="blogbody"></p>
+            </div><!-- /.blog-post -->
+            <nav>
+                <ul class="pager">
+<!--                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>-->
+                </ul>
+            </nav>
+        </div><!-- /.blog-main -->
+        <!--                    sidebar-->
+        <%@include file="sidebarfragment.jspf"%>
+    </div><!-- /.row -->
+</div><!-- /.container -->

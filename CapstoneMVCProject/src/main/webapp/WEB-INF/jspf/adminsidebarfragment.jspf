@@ -1,0 +1,27 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>This project demonstrates the efforts of <em>Rob, Robert, Zach and Yosep</em>. 
+            All credit should be given to our Muses, our Benevolent and Patient instructors, 
+            our Idols of code, <em> Sadukie and Eric Ward</em>.</p>
+        <p>Test <em>testing</em> Content here.</p>
+    </div>
+    <hr>
+    <div class="sidebar-module">
+        <h4>Recent Blog</h4>
+        <ol class="list-unstyled" id="blogtable">
+        </ol>
+    </div>
+    <hr>
+    <div class="sidebar-module">
+        <h4>Unposted Blogs</h4>
+        <ol class="list-unstyled" id="unpostedblogtable">
+            <!--            <li><a href="#">blog 1</a></li>
+                        <li><a href="#">page 3</a></li>
+                        <li><a href="#">blog 4</a></li>-->
+        </ol>
+    </div>
+    <hr>
+</div><!-- /.blog-sidebar -->

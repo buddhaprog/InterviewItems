@@ -1,0 +1,65 @@
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="detailsModalLabel">
+                    Edit Blog
+                </h4>
+            </div>
+            <div class="modal-body">
+                <h3 id="blog-id" type="hidden">
+                </h3>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="edit-title" class="col-md-4 control-label">
+                            Title: 
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" id="edit-title" placeholder="Title">
+                        </div>
+                    </div>
+<!--                    <div class="form-group">
+                        <label for="edit-user-id" class="col-md-4 control-label">
+                            Written By: 
+                        </label>-->
+                        <div class="col-md-8">
+                            <input type="hidden" class="form-control" id="edit-user-id" placeholder="Written By">
+                        </div>
+<!--                    </div>
+                    <div class="form-group">
+                        <label for="edit-blog-date-show" class="col-md-4 control-label">
+                            Written On:
+                        </label>-->
+                        <div class="col-md-8">
+                            <input type="hidden" class="form-control" id="edit-blog-date-show" placeholder="Written On">
+                        </div>
+<!--                    </div>
+                    <div class="form-group">
+                        <label for="edit-posted" class="col-md-4 control-label">
+                            Posted: 
+                        </label>-->
+                        <div class="col-md-8">
+                            <input type="hidden" class="form-control" id="edit-posted" placeholder="Posted">
+                        </div>
+                    <!--</div>-->
+                    <%@include file="tinyMCEScriptFragment.jspf" %>
+                    <textarea id="edit-blogtext" name="edit-blogtext">
+                       
+                    </textarea>
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-8">
+                            <button type="submit" id="blog-edit-button" class="btn btn-primary" data-dismiss="modal">
+                                Save Edited Blog
+                            </button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">
+                                Cancel
+                            </button>
+                            <input type="hidden" id="edit-blog-id">
+                            <input type="hidden" id="edit-blog-date">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

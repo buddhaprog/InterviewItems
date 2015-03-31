@@ -1,0 +1,26 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="container">
+    <div class="blog-header">
+        <h2>
+            Title: <input type="text" name="title" id="page-title" placeholder=" Insert Title" style="border-radius: 5px" ><br> 
+        </h2>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+                <p class="blog-post-meta">
+                </p>
+                <form method="post">
+                    <textarea id="page-body"></textarea>
+                </form>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                    <button type="button" class="btn btn-info" id="page-add-button">Add PAGE</button>
+                    <button type="button" class="btn btn-primary" id="page-post-button">Post PAGE</button>
+                </div>
+            </div><!-- /.blog-post -->
+        </div><!-- /.blog-main -->
+        <%@include file="adminsidebarfragment.jspf"%>
+    </div><!-- /.row -->
+</div><!-- /.container -->

@@ -1,0 +1,25 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="container">
+    <div class="blog-header">
+        <h1 class="blog-title">${blogTitle}</h1>
+        <!--        <p class="lead blog-description">Blogs in detail</p>-->
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
+                <div>${blogContent}</div>
+                <%--<%@include file="commentboxfragment.jspf"%>--%>
+            </div><!-- /.blog-post -->
+            <nav>
+                <ul class="pager">
+<!--                    <li><a href="#">Previous</a></li>
+                    <li><a href="#">Next</a></li>-->
+                </ul>
+            </nav>
+        </div><!-- /.blog-main -->
+        <!--                    sidebar-->
+        <%@include file="sidebarfragment.jspf"%>
+    </div><!-- /.row -->
+</div><!-- /.container -->

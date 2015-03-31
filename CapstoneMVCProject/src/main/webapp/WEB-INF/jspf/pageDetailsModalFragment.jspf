@@ -1,0 +1,33 @@
+<div class="modal fade" id="pageDetailsModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss= "modal">
+                    <span>
+                        Close
+                    </span>
+                </button>
+                <h4 class="modal-title" id="detailsModalLabel">
+                    Page Details
+                </h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Title</th>
+                        <td id="page-title"></td>
+                    </tr>
+                    <tr>
+                        <th>Posted</th>
+                        <td id="page-posted"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
