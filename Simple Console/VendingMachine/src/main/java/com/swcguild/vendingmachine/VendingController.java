@@ -33,9 +33,9 @@ public class VendingController {
             io.printme("File not found!!!");
         }
         //took this out feb 21 not sure what I broke
-       // catch (IOException e) {
-       //     io.printme("OUT OF ORDER!!!");
-       // }
+        catch (IOException e) {
+            io.printme("OUT OF ORDER!!!");
+        }
     }
     
     public void printMenu() {
