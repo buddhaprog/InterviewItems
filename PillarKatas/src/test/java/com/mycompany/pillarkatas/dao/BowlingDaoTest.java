@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pillarkatas;
+package com.mycompany.pillarkatas.dao;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author Rob
  */
-public class BabySitterTest {
+public class BowlingDaoTest {
     
-    public BabySitterTest() {
+    public BowlingDaoTest() {
     }
     
     @BeforeClass

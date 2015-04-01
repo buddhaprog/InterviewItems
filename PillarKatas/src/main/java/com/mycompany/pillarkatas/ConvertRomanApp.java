@@ -9,7 +9,7 @@ package com.mycompany.pillarkatas;
  *
  * @author Rob
  */
-public class ConvertRomanNumerals {
+public class ConvertRomanApp {
     //design notes
     //1 set up classes/objects
     //convert arabic to roman, convert roman to arabic
@@ -27,4 +27,7 @@ public class ConvertRomanNumerals {
     //3 add functionality
     // thoughts-- try to set up an array or hashmap, each letter corresponds to a value, iterate to arrive at value.
     //4 run tests, tweak until green
+    public static void main(String[] args) {
+        
+    }
 }

@@ -9,6 +9,8 @@ package com.mycompany.pillarkatas;
  *
  * @author Rob
  */
-public class PayBabySitter {
-    
+public class RedPencilApp {
+    public static void main(String[] args) {
+        
+    }
 }

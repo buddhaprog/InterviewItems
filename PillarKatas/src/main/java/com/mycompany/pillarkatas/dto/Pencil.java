@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.pillarkatas;
+package com.mycompany.pillarkatas.dto;
 
 /**
  *
  * @author Rob
  */
-public class RedPencil {
+public class Pencil {
     
 }
