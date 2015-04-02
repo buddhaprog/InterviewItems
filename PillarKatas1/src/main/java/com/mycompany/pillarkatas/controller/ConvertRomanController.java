@@ -5,7 +5,7 @@
  */
 package com.mycompany.pillarkatas.controller;
 
-import com.mycompany.pillarkatas.dao.NumeralsDao;
+import com.mycompany.pillarkatas.dao.NumeralsDaoInMemImpl;
 import com.mycompany.pillarkatas.dto.Numerals;
 import com.mycompany.pillarkatas.ui.ConsoleIO;
 
@@ -15,8 +15,9 @@ import com.mycompany.pillarkatas.ui.ConsoleIO;
  */
 public class ConvertRomanController {
     Numerals numeral;
-    NumeralsDao dao;
+    NumeralsDaoInMemImpl dao;
     ConsoleIO io;
+    char x;
 
     public void run() {
 
@@ -30,15 +31,22 @@ public class ConvertRomanController {
             ConsoleIO.putln();
             ConsoleIO.put("? ");
 
+            System.out.println(ConsoleIO.peek());
             while (ConsoleIO.peek() == ' ' || ConsoleIO.peek() == '\t') {
-                ConsoleIO.getAnyChar();
+                x = ConsoleIO.getAnyChar();
+                System.out.println(x);
             }
             if (ConsoleIO.peek() == '\n') {
                 break;
             }
 
+            System.out.println("We have a non-empty, non-whitespace string.");
+            System.out.println(ConsoleIO.peek());
+            
             if (Character.isDigit(ConsoleIO.peek())) {
+                //System.out.println("It's a digit.");
                 int arabic = ConsoleIO.getlnInt();
+                dao = new NumeralsDaoInMemImpl(arabic);
                 try {
 
                     ConsoleIO.putln(dao.toInt() + " = " + dao.toString());
@@ -47,7 +55,9 @@ public class ConvertRomanController {
                     ConsoleIO.putln(e.getMessage());
                 }
             } else {
+                //System.out.println("It's not a digit.");
                 String roman = ConsoleIO.getln();
+                dao = new NumeralsDaoInMemImpl(roman);
                 try {
                     ConsoleIO.putln(dao.toString() + " = " + dao.toInt());
                 } catch (NumberFormatException e) {
