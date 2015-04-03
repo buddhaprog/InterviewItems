@@ -13,8 +13,7 @@ import com.mycompany.pillarkatas.ui.ConsoleIO;
  * @author Rob
  */
 public class NumeralsDaoInMemImpl implements NumeralsDao {
-       private final int num;  
-
+    private final int num;  
     NumeralsDao dao;
     ConsoleIO io;
     Numerals numeral;
@@ -30,7 +29,6 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
         num = arabic;
     }
 
-
     public NumeralsDaoInMemImpl(String roman) {
 
         if (roman.length() == 0) {
@@ -41,16 +39,13 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
         int arabic = 0;  
 
         while (i < roman.length()) {
-
             char letter = roman.charAt(i);       
             int number = letterToNumber(letter); 
 
             if (number < 0) {
                 throw new NumberFormatException("Illegal character \"" + letter + "\" in roman numeral.");
             }
-
             i++;  
-
             if (i == roman.length()) {
                     arabic += number;
             } else {
@@ -62,15 +57,11 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
                    arabic += number;
                 }
             }
-
         }  
-
         if (arabic > 3999) {
             throw new NumberFormatException("Roman numeral must have value 3999 or less.");
         }
-
         num = arabic;
-
     } 
     @Override
     public int letterToNumber(char letter) {
@@ -113,5 +104,4 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
     public int toInt() {
         return num;
     }
-
 }

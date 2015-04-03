@@ -28,6 +28,8 @@ import com.mycompany.pillarkatas.controller.ConvertRomanController;
 //3 add functionality
 // thoughts-- try to set up an array or hashmap, each letter corresponds to a value, iterate to arrive at value.
 //4 run tests, tweak until green
+// note worked fine as two classes, once seperated/refactored mega issues with testing, 
+// extra note, work on testing more.
 public class ConvertRomanApp {
 
     public static void main(String[] args) {

@@ -5,19 +5,14 @@
  */
 package com.mycompany.pillarkatas.dao;
 
-
-
 /**
  *
  * @author Rob
  */
 public interface NumeralsDao {
 
-    
-   public int letterToNumber(char letter);
-
+    public int letterToNumber(char letter);
     @Override
     public String toString();
-
     public int toInt();
 }

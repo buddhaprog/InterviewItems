@@ -42,7 +42,6 @@ public class NumeralsDaoTest {
     public void tearDown() {
     }
 
-    
     @Test
     public void testLetterToNumber() {
         System.out.println("letterToNumber");
@@ -51,12 +50,8 @@ public class NumeralsDaoTest {
         int expResult = 5;
         int result = instance.letterToNumber('V');
         assertEquals(expResult, result);
-        
     }
-
-//    /**
-//     * Test of toString method, of class NumeralsDao.
-//     */
+//    
 //    @Test
 //    public void testToString() {
 //        System.out.println("toString");
@@ -68,9 +63,6 @@ public class NumeralsDaoTest {
 //        fail("The test case is a prototype.");
 //    }
 //
-//    /**
-//     * Test of toInt method, of class NumeralsDao.
-//     */
 //    @Test
 //    public void testToInt() {
 //        System.out.println("toInt");
