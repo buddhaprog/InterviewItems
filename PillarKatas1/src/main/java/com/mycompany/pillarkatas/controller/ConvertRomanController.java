@@ -13,6 +13,8 @@ import com.mycompany.pillarkatas.ui.ConsoleIO;
  *
  * @author Rob
  */
+//SEE ALSO SIMPLECONSOLEWEBAPP hooking up a one page version of 
+//roman converter as a webpage app
 public class ConvertRomanController {
     Numerals numeral;
     NumeralsDaoInMemImpl dao;
