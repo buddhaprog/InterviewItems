@@ -5,6 +5,8 @@
  */
 package com.swcguild.luckysevens.controller;
 
+import com.swcguild.luckysevens.dao.NumeralsDao;
+import com.swcguild.luckysevens.dao.NumeralsDaoInMemImpl;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,16 +19,24 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class RomanConverterController {
-    @RequestMapping(value="/displayRomanConverterForm", method=RequestMethod.GET)
-    public String displayRomanConverterForm(){
-    
-        return "romanConverterForm";}
-    
-//    @RequestMapping(value = "/enterNumberToBeFactored", method = RequestMethod.POST)
-//    public String convertNumeral(HttpServletRequest req, Model model) {
-//        String numeralConvertString = req.getParameter("numeralConverted");
-//    
-//        
-//    }
-        
+
+    @RequestMapping(value = "/displayRomanConverterForm", method = RequestMethod.GET)
+    public String displayRomanConverterForm() {
+
+        return "romanConverterForm";
+    }
+
+    @RequestMapping(value = "/enterNumeralToBeConverted", method = RequestMethod.POST)
+    public String convertNumeral(HttpServletRequest req, Model model) {
+        String numeralConvertString = req.getParameter("numeralConverted");
+        String userInput = numeralConvertString;
+        NumeralsDao dao = new NumeralsDaoInMemImpl();
+        String messageResult = dao.convertNumeral(userInput);
+        String messageResultOut = "You have chosen to convert: " + userInput;
+        model.addAttribute("resultMessage", messageResult);
+        model.addAttribute("resultMessagetwo", messageResultOut);
+        //model.addAttribute("myRomanConverterResults", );
+        return "romanConverterResult";
+    }
+
 }

@@ -14,7 +14,7 @@
 
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
         <link href="${pageContext.request.contextPath}/css/starter-template.css" rel="stylesheet">
-        <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon.png">
+        <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/whitetest.jpg">
 
     </head>
     <body>
@@ -30,7 +30,7 @@
                     <li role="presentation" ><a href="${pageContext.request.contextPath}/displayInterestCalculatorForm">Interest Calculator</a></li>
                     <li role="presentation" class="active"><a href="${pageContext.request.contextPath}/displayFlooringCalculatorForm">Flooring Calculator</a></li>
                     <li role="presentation" ><a href="${pageContext.request.contextPath}/displayTipCalculatorForm">Tip Calculator</a></li>
-                    <li role="presentation" ><a href="${pageContext.request.contextPath}/displayUnitConverterForm">Unit Converter</a></li>
+                    <li role="presentation" ><a href="${pageContext.request.contextPath}/displayRomanConverterForm">Roman Converter</a></li>
 
 
 

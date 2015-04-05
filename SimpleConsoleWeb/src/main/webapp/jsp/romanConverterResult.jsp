@@ -7,16 +7,14 @@
 <html>
     <head>
         <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Factorizor Results!</title>
-         Bootstrap core CSS 
+        <!--core CSS--> 
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
-
-         Custom styles for this template 
+        <!--         Custom styles for this template -->
         <link href="${pageContext.request.contextPath}/css/starter-template.css" rel="stylesheet">
-
-         SWC Icon 
+        <!--my Icon--> 
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/whitetest.jpg">
 
     </head>
@@ -38,15 +36,10 @@
                 </ul>       
             </div>
             <h2>${resultMessage}</h2>
-           <h2>Converter Results: ${myRomanConverterResults}</h2>
-               
-          
-            
-            
-            
+            <h2>Converter Results: ${resultMessagetwo}</h2>
 
         </div>
-         Placed at the end of the document so the pages load faster 
+        <!--Placed at the end of the document so the pages load faster--> 
         <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 

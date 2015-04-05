@@ -10,13 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Roman Converter</title>
-         Bootstrap core CSS 
+         <!--Bootstrap core CSS--> 
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 
-         Custom styles for this template 
+<!--         Custom styles for this template -->
         <link href="${pageContext.request.contextPath}/css/starter-template.css" rel="stylesheet">
 
-         SWC Icon 
+         <!--my Icon-->
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/whitetest.jpg">
 
     </head>
@@ -47,7 +47,7 @@
 
             </form>
         </div>
-         Placed at the end of the document so the pages load faster 
+         <!--Placed at the end of the document so the pages load faster--> 
         <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 
