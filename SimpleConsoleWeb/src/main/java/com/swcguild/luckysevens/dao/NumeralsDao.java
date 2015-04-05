@@ -11,6 +11,10 @@ package com.swcguild.luckysevens.dao;
  */
 public interface NumeralsDao {
 
+    public int romanToArabic(String roman);
+
+    public void checkUserInput(String userInput);
+
     public String convertNumeral(String userInput);
 
     public int letterToNumber(char letter);

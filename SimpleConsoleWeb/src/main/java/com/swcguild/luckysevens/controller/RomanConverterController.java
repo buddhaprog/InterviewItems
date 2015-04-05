@@ -28,14 +28,12 @@ public class RomanConverterController {
 
     @RequestMapping(value = "/enterNumeralToBeConverted", method = RequestMethod.POST)
     public String convertNumeral(HttpServletRequest req, Model model) {
-        String numeralConvertString = req.getParameter("numeralConverted");
-        String userInput = numeralConvertString;
+        String userInput = req.getParameter("numeralConverted");
         NumeralsDao dao = new NumeralsDaoInMemImpl();
         String messageResult = dao.convertNumeral(userInput);
         String messageResultOut = "You have chosen to convert: " + userInput;
         model.addAttribute("resultMessage", messageResult);
         model.addAttribute("resultMessagetwo", messageResultOut);
-        //model.addAttribute("myRomanConverterResults", );
         return "romanConverterResult";
     }
 

@@ -14,27 +14,30 @@ import com.swcguild.luckysevens.ui.ConsoleIO;
  */
 public class NumeralsDaoInMemImpl implements NumeralsDao {
 
-    boolean isArabic;
+    private boolean isArabic;
     private int num;
-    NumeralsDao dao;
-    ConsoleIO io;
-    Numerals numeral;
-    char x;
+    
 
+    @Override
     public void checkUserInput(String userInput) {
 
         if (userInput.matches("^[0-9]+$")) {
             this.num = Integer.parseInt(userInput);
-            this.isArabic = true;
+            this.setIsArabic(true);
         } else if (userInput.toUpperCase().matches("^[MCXILDV]+$")) {
             this.num = this.romanToArabic(userInput);
-            this.isArabic = false;
+            this.setIsArabic(false);
         } else {
             throw new NumberFormatException("Input was invalid, please enter either a roman numeral or arabic number.");
+        }
+        if (this.num > 3999){
+                    throw new NumberFormatException("Input was invalid, input must be less than 3999");
+
         }
     }
 
 
+    @Override
     public int romanToArabic(String roman) {
 
         if (roman.length() == 0) {
@@ -64,9 +67,7 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
                 }
             }
         }
-        if (arabic > 3999) {
-            throw new NumberFormatException("Roman numeral must have value 3999 or less.");
-        }
+       
                 return arabic;
     }
 
@@ -97,7 +98,7 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
     public String toString() {
 
         String roman = "";
-        int N = num;
+        int N = this.num;
         for (int i = 0; i < Numerals.getNumbers().length; i++) {
             while (N >= Numerals.getNumbers()[i]) {
                 roman += Numerals.getLetters()[i];
@@ -115,11 +116,11 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
     @Override
     public String convertNumeral(String userInput) {
 
-        String converterResult = null;
+        String converterResult;
         try {
             this.checkUserInput(userInput);
 
-            if (this.isArabic == true) {
+            if (this.isIsArabic() == true) {
                 converterResult = this.toInt() + " = " + this.toString();
                 ConsoleIO.putln(this.toInt() + " = " + this.toString());
             } else {
@@ -132,5 +133,19 @@ public class NumeralsDaoInMemImpl implements NumeralsDao {
             converterResult=e.getMessage();
         }
         return converterResult;
+    }
+
+    /**
+     * @return the isArabic
+     */
+    public boolean isIsArabic() {
+        return isArabic;
+    }
+
+    /**
+     * @param isArabic the isArabic to set
+     */
+    public void setIsArabic(boolean isArabic) {
+        this.isArabic = isArabic;
     }
 }
